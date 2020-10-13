@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1602567198315Converted/JsonSchema" xmlns:tns="/T1602567198315Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Asset_datePurchased" type="tns:Asset_datePurchased"/>
+    <xs:simpleType name="Asset_datePurchased">
+        <xs:restriction base="xs:date"/>
+    </xs:simpleType>
+    <xs:element name="Asset_assetType" type="tns:Asset_assetType"/>
+    <xs:simpleType name="Asset_assetType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="Asset_assetLocation" type="tns:Asset_assetLocation"/>
+    <xs:simpleType name="Asset_assetLocation">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="Asset" type="tns:Asset"/>
+    <xs:complexType name="Asset">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="id" type="xs:string"/>
+            <xs:element minOccurs="0" name="assetCode" type="xs:string"/>
+            <xs:element minOccurs="0" name="assetType" type="xs:string"/>
+            <xs:element minOccurs="0" name="assetLocation" type="xs:string"/>
+            <xs:element minOccurs="0" name="modelNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+            <xs:element minOccurs="0" name="datePurchased" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Asset_id" type="tns:Asset_id"/>
+    <xs:simpleType name="Asset_id">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="Asset_modelNumber" type="tns:Asset_modelNumber"/>
+    <xs:simpleType name="Asset_modelNumber">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="Asset_assetCode" type="tns:Asset_assetCode"/>
+    <xs:simpleType name="Asset_assetCode">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    <xs:element name="Asset_manufacturer" type="tns:Asset_manufacturer"/>
+    <xs:simpleType name="Asset_manufacturer">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+</xs:schema>

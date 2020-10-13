@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Asset",
+    "x-lastModified": "13 October 2020 3:53:28 pm (Australian Eastern Daylight Time)"
+  },
+  "paths": {
+    "/asset/{id}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/Asset"
+            },
+            "examples": {
+              "application/json": {
+                "id": "1234123",
+                "assetCode": "SMART",
+                "assetType": "Smart Meter",
+                "assetLocation": "8957228",
+                "modelNumber": "WM3x6",
+                "manufacturer": "Iskra",
+                "datePurchased": "2017-10-10"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getAsset_id"
+      }
+    }
+  },
+  "definitions": {
+    "Asset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "1234123"
+        },
+        "assetCode": {
+          "type": "string",
+          "default": "SMART"
+        },
+        "assetType": {
+          "type": "string",
+          "default": "Smart Meter"
+        },
+        "assetLocation": {
+          "type": "string",
+          "default": "8957228"
+        },
+        "modelNumber": {
+          "type": "string",
+          "default": "WM3x6"
+        },
+        "manufacturer": {
+          "type": "string",
+          "default": "Iskra"
+        },
+        "datePurchased": {
+          "type": "string",
+          "format": "date",
+          "default": "2017-10-10"
+        }
+      }
+    }
+  }
+}
