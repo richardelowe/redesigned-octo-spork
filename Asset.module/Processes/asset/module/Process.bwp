@@ -172,6 +172,23 @@
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/WriteToLogActivitySchema"
+            xmlns:tns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="LogParametersType">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="msgCode" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="loggerName" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="logLevel" type="xs:string"/>
+                    <xs:element form="unqualified" name="message" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ActivityInput" type="tns:LogParametersType"/>
+        </xs:schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20201013163225PLT"
             xmlns:extns="/T1602567198315Converted/JsonSchema"
@@ -408,6 +425,62 @@
                                     xsi:type="notation:Bounds" y="9"/>
                                     </children>
 
+                                    <children type="4002 bw.generalactivities.log">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".SF NS Text"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="98"
+                                    xsi:type="notation:Bounds" y="9"/>
+                                    </children>
+
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -429,7 +502,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="99"
+                                    height="101"
                                     width="382" xsi:type="notation:Bounds"/>
                                     </children>
 
@@ -449,7 +522,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
-                                    height="99"
+                                    height="101"
                                     width="385"
                                     x="15" xsi:type="notation:Bounds"/>
                                     </children>
@@ -464,7 +537,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity"/>
 
                                     <layoutConstraint
-                                    height="123"
+                                    height="125"
                                     width="425" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -522,7 +595,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.0"/>
                                     <layoutConstraint
-                                    height="142"
+                                    height="144"
                                     width="487"
                                     x="2" xsi:type="notation:Bounds"/>
                                     </children>
@@ -536,7 +609,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="172" width="506" xsi:type="notation:Bounds"/>
+                                    height="174" width="506" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -583,6 +656,17 @@
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".SF NS Text" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, -5, -108, 0]$[109, 0, -24, 5]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -607,6 +691,7 @@
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns0:getRequest" name="get" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns0:getResponse" name="getOut-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:ActivityInput" name="Log-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -625,7 +710,9 @@
                     tibex:xpdlId="9bbf1fcf-3fe8-4d2f-85e1-ffc78fa57d75" variable="get">
                     <bpws:scope name="scope1">
                         <bpws:flow name="flow1">
-                            <bpws:links/>
+                            <bpws:links>
+                                <bpws:link name="LogTogetOut" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="66d94f8a-01fa-4dc0-815d-614717f88540"/>
                             <bpws:empty name="OnMessageEnd"
@@ -639,7 +726,40 @@
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20201013163225PLT" xmlns:tns1="http://xmlns.example.com/Asset-id/parameters" xmlns:tns2="/T1602567198315Converted/JsonSchema" version="2.0"&gt;&lt;xsl:param name="get"/&gt;&lt;xsl:template name="getOut-input" match="/"&gt;&lt;tns:getResponse&gt;&lt;item&gt;&lt;tns2:Asset&gt;&lt;tns2:id&gt;&lt;xsl:value-of select="$get/parameters/tns1:assetGetParameters/tns1:id"/&gt;&lt;/tns2:id&gt;&lt;tns2:assetCode&gt;&lt;xsl:value-of select="&amp;quot;SMART&amp;quot;"/&gt;&lt;/tns2:assetCode&gt;&lt;tns2:assetType&gt;&lt;xsl:value-of select="&amp;quot;Smart Meter&amp;quot;"/&gt;&lt;/tns2:assetType&gt;&lt;tns2:assetLocation&gt;&lt;xsl:value-of select="&amp;quot;8957228&amp;quot;"/&gt;&lt;/tns2:assetLocation&gt;&lt;tns2:modelNumber&gt;&lt;xsl:value-of select="&amp;quot;WM3x6&amp;quot;"/&gt;&lt;/tns2:modelNumber&gt;&lt;tns2:manufacturer&gt;&lt;xsl:value-of select="&amp;quot;Iskra&amp;quot;"/&gt;&lt;/tns2:manufacturer&gt;&lt;tns2:datePurchased&gt;&lt;xsl:value-of select="current-date()"/&gt;&lt;/tns2:datePurchased&gt;&lt;/tns2:Asset&gt;&lt;/item&gt;&lt;/tns:getResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <bpws:targets>
+                                    <bpws:target linkName="LogTogetOut"/>
+                                </bpws:targets>
                             </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:activityExtension
+                                    inputVariable="Log-input" name="Log"
+                                    tibex:xpdlId="b4c80df9-b28c-4b77-bb0c-7673c3c9d163" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="LogTogetOut"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns3:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;&amp;quot;Received Message&amp;quot;&quot;/>&lt;/message>&lt;/tns3:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.generalactivities.log"
+                                    version="6.0.0.001"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                </tibex:activityExtension>
+                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
